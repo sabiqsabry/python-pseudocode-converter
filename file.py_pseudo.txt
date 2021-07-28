@@ -1,0 +1,46 @@
+SET numberList TO []
+
+SET oddList TO []
+
+SET evenList TO []
+
+
+
+DEFINE FUNCTION OddAndEEven(numbers):
+
+    SET INPUTValues TO INPUT("Enter values IN a list seperating by a space: ")
+
+    OUTPUT('\n')
+
+    SET numberList TO INPUTValues.split()
+
+
+
+    FOR i IN range(len(numberList)):
+
+        SET numberList[i] TO int(numberList[i])
+
+
+
+    FOR x IN range(len(numberList)):
+
+        IF (numberList[x] < 0 or numberList[x] EQUALS 0):
+
+            continue
+
+        ELSEIF (numberList[x]%2) EQUALS 0:
+
+            evenList.append(numberList[x])
+
+        ELSE:
+
+            oddList.append(numberList[x])
+
+
+
+OddAndEven(numberList)
+
+OUTPUT("The odd list: ", oddList)
+
+OUTPUT("The Even list: ", evenList)
+
